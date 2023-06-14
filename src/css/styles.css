@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
 body {
-  height: 100vh;
   display: flex;
   justify-content: center;
   background-color: #ff758f;
@@ -15,8 +15,11 @@ body {
 #campo {
   width: auto;
   height: auto;
-  display: inline-block;
+  display: contents;
   align-items: center;
+}
+#primeiroBlock #segundoBloco {
+  margin: 50px;
 }
 .valentines-day-card {
   position: relative;
@@ -636,4 +639,5 @@ input#open {
     transform: scale(1.1) rotate(-45deg);
   }
 }
+
 
