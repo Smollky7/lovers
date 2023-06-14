@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
 body {
-  display: flex;
+  display: inline;
   justify-content: center;
   background-color: #ff758f;
   color: #333;
@@ -257,7 +257,7 @@ a img {
   height: 450px;
   margin-top: 5em;
   min-width: 800px;
-  max-width: 900px;
+  max-width: 861px;
 }
 .photo-album .polaroid {
   position: absolute;
