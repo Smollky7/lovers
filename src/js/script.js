@@ -106,7 +106,8 @@ const Time = () => {
 };
 const Info = (props) => {
     return (React.createElement("div", { id: props.id, className: "info" },
-        React.createElement(Time, null)));
+        React.createElement(Time, null),
+        React.createElement(WeatherSnap, null)));
 };
 const PinDigit = (props) => {
     const [hidden, setHiddenTo] = React.useState(false);
@@ -208,8 +209,7 @@ const Restaurants = () => {
                 desc: "Presente",
                 id: 1,
                 image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsUF0M1BR0RxZtaFSoAOLMqIzfN6NCp1aT30vp2ykhNA&s",
-                title: "Dia dos namorados",
-                link: "https://exemplo.com/presente"
+                title: "Dia dos namorados"
             }, {
                 desc: "Filmes das nossas vidas",
                 id: 2,
@@ -219,14 +219,14 @@ const Restaurants = () => {
             const styles = {
                 backgroundImage: `url(${restaurant.image})`
             };
-            return (React.createElement("div", { key: restaurant.id, className: "restaurant-card background-image", href: restaurant.link, style: styles },
+            return (React.createElement("div", { key: restaurant.id, className: "restaurant-card background-image", style: styles },
                 React.createElement("div", { className: "restaurant-card-content" },
                     React.createElement("div", { className: "restaurant-card-content-items" },
                         React.createElement("span", { className: "restaurant-card-title" }, restaurant.title),
                         React.createElement("span", { className: "restaurant-card-desc" }, restaurant.desc)))));
         });
     };
-    return (React.createElement(MenuSection, { id: "restaurants-section"}, getRestaurants()));
+    return (React.createElement(MenuSection, { icon: "fa-regular fa-code", id: "restaurants-section", title: "Aplicativos" }, getRestaurants()));
 };
 
 const UserStatusButton = (props) => {
