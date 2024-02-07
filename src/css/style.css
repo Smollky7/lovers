@@ -256,6 +256,13 @@ body span {
   font-size: 0.8em;
   margin-left: 3px;
 }
+.months-since{
+  color: #ffffff;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  margin: 0px;
+  padding: 0px;
+}
 #app .reminder {
   display: flex;
   gap: 6px;
