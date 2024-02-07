@@ -209,25 +209,40 @@ const Restaurants = () => {
                 desc: "Presente",
                 id: 1,
                 image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsUF0M1BR0RxZtaFSoAOLMqIzfN6NCp1aT30vp2ykhNA&s",
-                title: "Dia dos namorados"
+                title: "Dia dos namorados",
+                link: "https://www.example.com/restaurante1"
             }, {
                 desc: "Filmes das nossas vidas",
                 id: 2,
                 image: "https://files.tecnoblog.net/wp-content/uploads/2021/12/melhor-streaming-2021-netflix-1-700x394.jpg",
-                title: "Netflix"
+                title: "Netflix",
+                link: "https://www.example.com/restaurante2"
             }].map((restaurant) => {
-            const styles = {
-                backgroundImage: `url(${restaurant.image})`
-            };
-            return (React.createElement("div", { key: restaurant.id, className: "restaurant-card background-image", style: styles },
-                React.createElement("div", { className: "restaurant-card-content" },
-                    React.createElement("div", { className: "restaurant-card-content-items" },
-                        React.createElement("span", { className: "restaurant-card-title" }, restaurant.title),
-                        React.createElement("span", { className: "restaurant-card-desc" }, restaurant.desc)))));
-        });
+                const styles = {
+                    backgroundImage: `url(${restaurant.image})`
+                };
+                return (
+                    React.createElement("div", { key: restaurant.id, className: "restaurant-card background-image restaurant-link", style: styles},
+                        React.createElement("div", { className: "restaurant-card-content" },
+                            React.createElement("div", { className: "restaurant-card-content-items" },
+                                React.createElement("a", { href: restaurant.link, className: "restaurant-link" },
+                                    React.createElement("span", { className: "restaurant-card-title" }, restaurant.title)
+                                ),
+                                React.createElement("span", { className: "restaurant-card-desc" }, restaurant.desc)
+                            )
+                        )
+                    )
+                );
+            });
     };
-    return (React.createElement(MenuSection, { icon: "fa-regular fa-code", id: "restaurants-section", title: "Aplicativos" }, getRestaurants()));
+    return (
+        React.createElement(MenuSection, { icon: "fa-regular fa-code", id: "restaurants-section", title: "Aplicativos" },
+            getRestaurants()
+        )
+    );
 };
+
+
 
 const UserStatusButton = (props) => {
     const { userStatus, setUserStatusTo } = React.useContext(AppContext);
