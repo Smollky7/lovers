@@ -34,7 +34,7 @@ const N = {
 
 const T = {
     format: (date) => {
-        const hours = T.formatHours(date.getHours()), minutes = date.getMinutes(), seconds = date.getSeconds();
+        const hours = date.getHours(), minutes = date.getMinutes(), seconds = date.getSeconds();
         return `${hours}:${T.formatSegment(minutes)}`;
     },
     formatHours: (hours) => {
