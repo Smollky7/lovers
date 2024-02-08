@@ -132,7 +132,7 @@ const Info = (props) => {
         const monthsText = months === 1 ? "mês" : "meses"; // Corrigido para verificar corretamente se é 1 mês
         if (years > 0) {
             const yearsText = years === 1 ? "ano" : "anos"; // Corrigido para verificar corretamente se é 1 ano
-            return `${months} ${monthsText} e ${years} ${yearsText}`;
+            return `${years} ${yearsText} e ${months} ${monthsText}`;
         } else {
             return `${months} ${monthsText}`;
         }
@@ -142,7 +142,7 @@ const Info = (props) => {
     return (
         React.createElement("div", { id: props.id, className: "info" },
             React.createElement(Time, null),
-            React.createElement("span", { className: "months-since" }, `São ${formatMonthsAndYearsText(monthsSince, yearsSince)}.`))
+            React.createElement("span", { className: "months-since" }, `🗓️ São ${formatMonthsAndYearsText(monthsSince, yearsSince)}`))
     );
 };
 
