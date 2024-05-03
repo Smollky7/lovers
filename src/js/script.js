@@ -142,7 +142,7 @@ const Info = (props) => {
     return (
         React.createElement("div", { id: props.id, className: "info" },
             React.createElement(Time, null),
-            React.createElement("span", { className: "months-since" }, `🗓️ São ${formatMonthsAndYearsText(monthsSince, yearsSince)}`))
+            React.createElement("span", { className: "months-since" }, `🗓️ São ${formatMonthsAndYearsText(monthsSince, yearsSince)} EU AMO MINHA MUIÉ`))
     );
 };
 
